@@ -8,11 +8,29 @@
 import SwiftUI
 
 struct MedicineEntryDetailView: View {
+    
+    let detailMedicineEntry: MedicineEntry
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+        ZStack {
+            CustomBackgroundView()
+            VStack{
+                Text(detailMedicineEntry.quantity)
+                    .bold()
+                    .font(.title)
+                    .italic()
+                    .padding()
+                Text(detailMedicineEntry.date, style: .date)
+                    .bold()
+                    .italic()
+            }
+            .navigationTitle(detailMedicineEntry.name)
+            
+        }
 }
+    }
+        
 
 #Preview {
-    MedicineEntryDetailView()
+    MedicineEntryDetailView(detailMedicineEntry: MedicineEntry(name: "Analgin", quantity: "5", date: Date()))
 }

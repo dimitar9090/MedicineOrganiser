@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D15ACB922B0A67B300BC3AF0 /* CustomBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15ACB912B0A67B300BC3AF0 /* CustomBackgroundView.swift */; };
+		D15B30F12B05828200E76590 /* MedicineEntryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15B30F02B05828200E76590 /* MedicineEntryDetailView.swift */; };
+		D15B30F32B058B0800E76590 /* MedicineEntryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15B30F22B058B0800E76590 /* MedicineEntryRowView.swift */; };
+		D162152F2B06D65000697E6F /* CreateMedicineEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D162152E2B06D65000697E6F /* CreateMedicineEntryView.swift */; };
+		D16215312B06DF8800697E6F /* EditMedicineEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16215302B06DF8800697E6F /* EditMedicineEntryView.swift */; };
 		D1819ED42B03B19E005362CC /* MedicineOrganiserAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1819ED32B03B19E005362CC /* MedicineOrganiserAppApp.swift */; };
-		D1819ED62B03B19E005362CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1819ED52B03B19E005362CC /* ContentView.swift */; };
+		D1819ED62B03B19E005362CC /* MedicineEntriesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1819ED52B03B19E005362CC /* MedicineEntriesListView.swift */; };
 		D1819ED82B03B19F005362CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1819ED72B03B19F005362CC /* Assets.xcassets */; };
 		D1819EDB2B03B19F005362CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1819EDA2B03B19F005362CC /* Preview Assets.xcassets */; };
 		D1819EE52B03B19F005362CC /* MedicineOrganiserAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1819EE42B03B19F005362CC /* MedicineOrganiserAppTests.swift */; };
 		D1819EEF2B03B1A0005362CC /* MedicineOrganiserAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1819EEE2B03B1A0005362CC /* MedicineOrganiserAppUITests.swift */; };
 		D1819EF12B03B1A0005362CC /* MedicineOrganiserAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1819EF02B03B1A0005362CC /* MedicineOrganiserAppUITestsLaunchTests.swift */; };
+		D1819EFE2B042B86005362CC /* MedicineEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1819EFD2B042B86005362CC /* MedicineEntry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +40,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D15ACB912B0A67B300BC3AF0 /* CustomBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackgroundView.swift; sourceTree = "<group>"; };
+		D15B30F02B05828200E76590 /* MedicineEntryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineEntryDetailView.swift; sourceTree = "<group>"; };
+		D15B30F22B058B0800E76590 /* MedicineEntryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineEntryRowView.swift; sourceTree = "<group>"; };
+		D162152E2B06D65000697E6F /* CreateMedicineEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMedicineEntryView.swift; sourceTree = "<group>"; };
+		D16215302B06DF8800697E6F /* EditMedicineEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMedicineEntryView.swift; sourceTree = "<group>"; };
 		D1819ED02B03B19E005362CC /* MedicineOrganiserApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedicineOrganiserApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1819ED32B03B19E005362CC /* MedicineOrganiserAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineOrganiserAppApp.swift; sourceTree = "<group>"; };
-		D1819ED52B03B19E005362CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D1819ED52B03B19E005362CC /* MedicineEntriesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineEntriesListView.swift; sourceTree = "<group>"; };
 		D1819ED72B03B19F005362CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1819EDA2B03B19F005362CC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D1819EE02B03B19F005362CC /* MedicineOrganiserAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MedicineOrganiserAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +55,7 @@
 		D1819EEA2B03B1A0005362CC /* MedicineOrganiserAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MedicineOrganiserAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1819EEE2B03B1A0005362CC /* MedicineOrganiserAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineOrganiserAppUITests.swift; sourceTree = "<group>"; };
 		D1819EF02B03B1A0005362CC /* MedicineOrganiserAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineOrganiserAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D1819EFD2B042B86005362CC /* MedicineEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineEntry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +107,13 @@
 			isa = PBXGroup;
 			children = (
 				D1819ED32B03B19E005362CC /* MedicineOrganiserAppApp.swift */,
-				D1819ED52B03B19E005362CC /* ContentView.swift */,
+				D1819ED52B03B19E005362CC /* MedicineEntriesListView.swift */,
+				D15B30F22B058B0800E76590 /* MedicineEntryRowView.swift */,
+				D15B30F02B05828200E76590 /* MedicineEntryDetailView.swift */,
+				D162152E2B06D65000697E6F /* CreateMedicineEntryView.swift */,
+				D16215302B06DF8800697E6F /* EditMedicineEntryView.swift */,
+				D15ACB912B0A67B300BC3AF0 /* CustomBackgroundView.swift */,
+				D1819EFD2B042B86005362CC /* MedicineEntry.swift */,
 				D1819ED72B03B19F005362CC /* Assets.xcassets */,
 				D1819ED92B03B19F005362CC /* Preview Content */,
 			);
@@ -257,7 +275,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1819ED62B03B19E005362CC /* ContentView.swift in Sources */,
+				D15B30F32B058B0800E76590 /* MedicineEntryRowView.swift in Sources */,
+				D162152F2B06D65000697E6F /* CreateMedicineEntryView.swift in Sources */,
+				D1819ED62B03B19E005362CC /* MedicineEntriesListView.swift in Sources */,
+				D15ACB922B0A67B300BC3AF0 /* CustomBackgroundView.swift in Sources */,
+				D1819EFE2B042B86005362CC /* MedicineEntry.swift in Sources */,
+				D16215312B06DF8800697E6F /* EditMedicineEntryView.swift in Sources */,
+				D15B30F12B05828200E76590 /* MedicineEntryDetailView.swift in Sources */,
 				D1819ED42B03B19E005362CC /* MedicineOrganiserAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
