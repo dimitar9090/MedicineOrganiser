@@ -46,7 +46,7 @@ struct CreateMedicineEntryView: View {
                     Button("Save") {
                         let newMedicineEntry = MedicineEntry(name: name, quantity: quantity, date: date)
                         // You might want to associate the selected image with the medicine entry.
-                        // newMedicineEntry.image = selectedImage
+                         //newMedicineEntry.image = selectedImage
                         modelContext.insert(newMedicineEntry)
                         dismiss()
                     }
