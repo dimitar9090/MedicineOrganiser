@@ -18,7 +18,7 @@ struct MedicineEntryDetailView: View {
                             .bold()
                         Spacer()
                         Text(detailMedicineEntry.name)
-                    }
+                    }//Hstack
                     .font(.title2)
                     .padding(.horizontal)
 
@@ -27,7 +27,7 @@ struct MedicineEntryDetailView: View {
                             .bold()
                         Spacer()
                         Text("\(detailMedicineEntry.quantity)")
-                    }
+                    }//Hstack
                     .font(.title2)
                     .padding(.horizontal)
 
@@ -36,12 +36,12 @@ struct MedicineEntryDetailView: View {
                             .bold()
                         Spacer()
                         Text(detailMedicineEntry.date, style: .date)
-                    }
+                    }//Hstack
                     .font(.title2)
                     .padding(.horizontal)
 
                     Spacer() // Pushes everything to the top
-                }
+                }//Vstack
                 .padding()
             }
             .navigationTitle("Medicine Details")

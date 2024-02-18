@@ -19,19 +19,7 @@ struct CreateMedicineEntryView: View {
                 TextField("Quantity", text: $quantity)
                 DatePicker("Expire Date", selection: $date, displayedComponents: .date)
                 
-                Button("Take Picture") {
-                    isImagePickerPresented.toggle()
-                }
-                .sheet(isPresented: $isImagePickerPresented) {
-                    ImagePicker(image: $selectedImage)
-                }
-                
-                if let selectedImage = selectedImage {
-                    Image(uiImage: selectedImage)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 200)
-                }
+               
             }
             .background(CustomBackgroundView())
             .scrollContentBackground(.hidden)
@@ -44,9 +32,8 @@ struct CreateMedicineEntryView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Save") {
+                        
                         let newMedicineEntry = MedicineEntry(name: name, quantity: quantity, date: date)
-                        // You might want to associate the selected image with the medicine entry.
-                         //newMedicineEntry.image = selectedImage
                         modelContext.insert(newMedicineEntry)
                         dismiss()
                     }
@@ -62,37 +49,4 @@ struct CreateMedicineEntryView_Previews: PreviewProvider {
     }
 }
 
-struct ImagePicker: UIViewControllerRepresentable {
-    @Binding var image: UIImage?
-    @Environment(\.presentationMode) private var presentationMode
 
-    class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-        let parent: ImagePicker
-
-        init(parent: ImagePicker) {
-            self.parent = parent
-        }
-
-        func imagePickerController(_ picker: UIImagePickerController,
-                                   didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-            if let uiImage = info[.originalImage] as? UIImage {
-                parent.image = uiImage
-            }
-            parent.presentationMode.wrappedValue.dismiss()
-        }
-    }
-
-    func makeCoordinator() -> Coordinator {
-        return Coordinator(parent: self)
-    }
-
-    func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePicker>) -> UIImagePickerController {
-        let picker = UIImagePickerController()
-        picker.delegate = context.coordinator
-        return picker
-    }
-
-    func updateUIViewController(_ uiViewController: UIImagePickerController,
-                                context: UIViewControllerRepresentableContext<ImagePicker>) {
-    }
-}
