@@ -25,9 +25,12 @@ struct MedicineEntryRowView: View {
                     .bold()
             }
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(isExpired ? Color.red.opacity(1.0) : Color.blue) // Set background color based on expiration
+        .padding() // Add padding to ensure content does not touch the edges.
+        .frame(maxWidth: .infinity, alignment: .leading) // Ensure VStack takes full width.
+        .background(isExpired ? Color.red : Color.blue) // Set background color based on expiration
         .cornerRadius(10)
+        .listRowInsets(EdgeInsets()) // Remove default list row padding
+        .listRowBackground(isExpired ? Color.red : Color.blue) // Ensure full row background color in List
     }
 }
 
