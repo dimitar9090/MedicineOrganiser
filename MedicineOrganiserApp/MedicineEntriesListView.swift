@@ -36,7 +36,7 @@ struct MedicineEntriesListView: View {
                 }
                 .animation(.easeInOut, value: searchResults)
                 .navigationBarTitleDisplayMode(.inline)
-                .navigationBarItems(leading: Text("\(medicineEntries.count) Medicines").font(.system(size: 40).bold()))
+                .navigationBarItems(leading: Text("\(medicineEntries.count) Лекарства").font(.system(size: 40).bold()))
                 .toolbar {
                     Button(action: {
                         showCreateView = true
