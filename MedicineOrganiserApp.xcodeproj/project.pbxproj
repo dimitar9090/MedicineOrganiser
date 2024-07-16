@@ -20,6 +20,7 @@
 		D1819EEF2B03B1A0005362CC /* MedicineOrganiserAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1819EEE2B03B1A0005362CC /* MedicineOrganiserAppUITests.swift */; };
 		D1819EF12B03B1A0005362CC /* MedicineOrganiserAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1819EF02B03B1A0005362CC /* MedicineOrganiserAppUITestsLaunchTests.swift */; };
 		D1819EFE2B042B86005362CC /* MedicineEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1819EFD2B042B86005362CC /* MedicineEntry.swift */; };
+		D18800B32C46B24B000AE1F8 /* OpenigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18800B22C46B24B000AE1F8 /* OpenigView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		D1819EEE2B03B1A0005362CC /* MedicineOrganiserAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineOrganiserAppUITests.swift; sourceTree = "<group>"; };
 		D1819EF02B03B1A0005362CC /* MedicineOrganiserAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineOrganiserAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D1819EFD2B042B86005362CC /* MedicineEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineEntry.swift; sourceTree = "<group>"; };
+		D18800B22C46B24B000AE1F8 /* OpenigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenigView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				D1819ED32B03B19E005362CC /* MedicineOrganiserAppApp.swift */,
+				D18800B22C46B24B000AE1F8 /* OpenigView.swift */,
 				D1819ED52B03B19E005362CC /* MedicineEntriesListView.swift */,
 				D15B30F22B058B0800E76590 /* MedicineEntryRowView.swift */,
 				D15B30F02B05828200E76590 /* MedicineEntryDetailView.swift */,
@@ -276,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D15B30F32B058B0800E76590 /* MedicineEntryRowView.swift in Sources */,
+				D18800B32C46B24B000AE1F8 /* OpenigView.swift in Sources */,
 				D162152F2B06D65000697E6F /* CreateMedicineEntryView.swift in Sources */,
 				D1819ED62B03B19E005362CC /* MedicineEntriesListView.swift in Sources */,
 				D15ACB922B0A67B300BC3AF0 /* CustomBackgroundView.swift in Sources */,
