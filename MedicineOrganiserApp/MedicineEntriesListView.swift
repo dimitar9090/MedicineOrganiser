@@ -94,6 +94,6 @@ struct MedicineEntriesListView: View {
 struct MedicineEntriesListView_Previews: PreviewProvider {
     static var previews: some View {
         MedicineEntriesListView()
-            .modelContainer(for: MedicineEntry.self, inMemory: true)
+            .modelContainer(for: MedicineEntry.self, inMemory: false) // Use non-in-memory store
     }
 }
