@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D14F6D912C4809C800BA48FC /* ReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14F6D902C4809C800BA48FC /* ReminderView.swift */; };
+		D14F6D932C480A1C00BA48FC /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14F6D922C480A1C00BA48FC /* Reminder.swift */; };
+		D14F6D952C480A5700BA48FC /* AddReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14F6D942C480A5700BA48FC /* AddReminderView.swift */; };
+		D14F6D972C480A8100BA48FC /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14F6D962C480A8100BA48FC /* NotificationManager.swift */; };
+		D14F6D992C480B9700BA48FC /* ReminderList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14F6D982C480B9700BA48FC /* ReminderList.swift */; };
 		D15ACB922B0A67B300BC3AF0 /* CustomBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15ACB912B0A67B300BC3AF0 /* CustomBackgroundView.swift */; };
 		D15B30F12B05828200E76590 /* MedicineEntryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15B30F02B05828200E76590 /* MedicineEntryDetailView.swift */; };
 		D15B30F32B058B0800E76590 /* MedicineEntryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15B30F22B058B0800E76590 /* MedicineEntryRowView.swift */; };
@@ -41,6 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D14F6D902C4809C800BA48FC /* ReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderView.swift; sourceTree = "<group>"; };
+		D14F6D922C480A1C00BA48FC /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		D14F6D942C480A5700BA48FC /* AddReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminderView.swift; sourceTree = "<group>"; };
+		D14F6D962C480A8100BA48FC /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		D14F6D982C480B9700BA48FC /* ReminderList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderList.swift; sourceTree = "<group>"; };
 		D15ACB912B0A67B300BC3AF0 /* CustomBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackgroundView.swift; sourceTree = "<group>"; };
 		D15B30F02B05828200E76590 /* MedicineEntryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineEntryDetailView.swift; sourceTree = "<group>"; };
 		D15B30F22B058B0800E76590 /* MedicineEntryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineEntryRowView.swift; sourceTree = "<group>"; };
@@ -160,6 +170,11 @@
 		D18800B52C46B622000AE1F8 /* MedicineReminder */ = {
 			isa = PBXGroup;
 			children = (
+				D14F6D902C4809C800BA48FC /* ReminderView.swift */,
+				D14F6D922C480A1C00BA48FC /* Reminder.swift */,
+				D14F6D942C480A5700BA48FC /* AddReminderView.swift */,
+				D14F6D962C480A8100BA48FC /* NotificationManager.swift */,
+				D14F6D982C480B9700BA48FC /* ReminderList.swift */,
 			);
 			path = MedicineReminder;
 			sourceTree = "<group>";
@@ -295,11 +310,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D15B30F32B058B0800E76590 /* MedicineEntryRowView.swift in Sources */,
+				D14F6D992C480B9700BA48FC /* ReminderList.swift in Sources */,
 				D18800B32C46B24B000AE1F8 /* OpenigView.swift in Sources */,
+				D14F6D952C480A5700BA48FC /* AddReminderView.swift in Sources */,
+				D14F6D932C480A1C00BA48FC /* Reminder.swift in Sources */,
 				D162152F2B06D65000697E6F /* CreateMedicineEntryView.swift in Sources */,
 				D1819ED62B03B19E005362CC /* MedicineEntriesListView.swift in Sources */,
+				D14F6D972C480A8100BA48FC /* NotificationManager.swift in Sources */,
 				D15ACB922B0A67B300BC3AF0 /* CustomBackgroundView.swift in Sources */,
 				D1819EFE2B042B86005362CC /* MedicineEntry.swift in Sources */,
+				D14F6D912C4809C800BA48FC /* ReminderView.swift in Sources */,
 				D16215312B06DF8800697E6F /* EditMedicineEntryView.swift in Sources */,
 				D15B30F12B05828200E76590 /* MedicineEntryDetailView.swift in Sources */,
 				D1819ED42B03B19E005362CC /* MedicineOrganiserAppApp.swift in Sources */,
