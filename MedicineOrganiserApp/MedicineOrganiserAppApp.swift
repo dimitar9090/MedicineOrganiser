@@ -20,7 +20,7 @@ struct MedicineOrganiserAppApp: App {
     
     var body: some Scene {
         WindowGroup {
-            MedicineEntriesListView()
+            OpenigView()
                 .modelContainer(sharedModelContainer)
         }
     }

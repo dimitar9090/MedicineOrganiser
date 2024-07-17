@@ -4,12 +4,12 @@ struct Reminder: Identifiable, Codable {
     var id: UUID
     var name: String
     var dosage: String
-    var timeOfDay: Date
+    var timesOfDay: [Date]
     
-    init(id: UUID = UUID(), name: String, dosage: String, timeOfDay: Date) {
+    init(id: UUID = UUID(), name: String, dosage: String, timesOfDay: [Date]) {
         self.id = id
         self.name = name
         self.dosage = dosage
-        self.timeOfDay = timeOfDay
+        self.timesOfDay = timesOfDay
     }
 }

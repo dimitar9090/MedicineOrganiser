@@ -4,7 +4,7 @@ struct AddReminderView: View {
     @ObservedObject var reminderList: ReminderList
     @State private var name = ""
     @State private var dosage = ""
-    @State private var timeOfDay = Date()
+    @State private var timesOfDay: [Date] = [Date()]
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
@@ -12,16 +12,60 @@ struct AddReminderView: View {
             Form {
                 TextField("Name", text: $name)
                 TextField("Dosage", text: $dosage)
-                DatePicker("Time of Day", selection: $timeOfDay, displayedComponents: .hourAndMinute)
+                    .keyboardType(.numberPad)
+                    .onChange(of: dosage, perform: { newValue in
+                        updateTimesOfDay()
+                    })
+                
+                Section(header: Text("Times of Day")) {
+                    ForEach(timesOfDay.indices, id: \.self) { index in
+                        DatePicker("Dosage \(index + 1)", selection: $timesOfDay[index], displayedComponents: .hourAndMinute)
+                    }
+                }
+                
+                Button(action: {
+                    addTimeOfDay()
+                }) {
+                    HStack {
+                        Image(systemName: "plus")
+                        Text("Add Time")
+                    }
+                }
             }
             .navigationTitle("Add Reminder")
             .navigationBarItems(trailing: Button("Save") {
-                let newReminder = Reminder(name: name, dosage: dosage, timeOfDay: timeOfDay)
-                reminderList.reminders.append(newReminder)
-                NotificationManager().scheduleNotification(reminder: newReminder)
-                presentationMode.wrappedValue.dismiss()
+                saveReminder()
             })
         }
+        // Ensure the onChange modifier is applied outside of Form
+        .onChange(of: dosage) { newValue in
+            updateTimesOfDay()
+        }
+    }
+    
+    private func updateTimesOfDay() {
+        if let newDosage = Int(dosage) {
+            if newDosage > timesOfDay.count {
+                // Add missing dosage times
+                for _ in timesOfDay.count..<newDosage {
+                    timesOfDay.append(Date())
+                }
+            } else if newDosage < timesOfDay.count {
+                // Remove excess dosage times
+                timesOfDay.removeLast(timesOfDay.count - newDosage)
+            }
+        }
+    }
+    
+    private func addTimeOfDay() {
+        timesOfDay.append(Date())
+    }
+    
+    private func saveReminder() {
+        let newReminder = Reminder(name: name, dosage: dosage, timesOfDay: timesOfDay)
+        reminderList.reminders.append(newReminder)
+        NotificationManager().scheduleNotifications(for: newReminder)
+        presentationMode.wrappedValue.dismiss()
     }
 }
 

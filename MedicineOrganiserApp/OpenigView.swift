@@ -1,39 +1,42 @@
-//
-//  OpenigView.swift
-//  MedicineOrganiserApp
-//
-//  Created by Dimitar Angelov on 16.07.24.
-//
-
 import SwiftUI
 
 struct OpenigView: View {
     var body: some View {
-        NavigationView { // Begins the NavigationView
-            VStack {
+        NavigationView {
+            VStack(spacing: 50) { // Add spacing between NavigationLinks
                 NavigationLink(destination: MedicineEntriesListView()) {
-                    Text("Go to First View")
+                    Text("Storing Medicines")
                         .padding()
-                        .foregroundColor(.blue)
+                        .foregroundColor(.white) // Text color
+                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                        .frame(maxWidth: .infinity)
+                        .background(Color.blue) // Button background color
+                        .cornerRadius(10) // Rounded corners
                 }
-                .padding()
+                .padding(.horizontal, 40) // Horizontal padding
                 
-                NavigationLink(destination: Text("Second View")) {
-                    Text("Go to Second View")
+                NavigationLink(destination: ReminderView()) {
+                    Text("Medicine Reminder")
                         .padding()
-                        .foregroundColor(.blue)
+                        .foregroundColor(.white) // Text color
+                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                        .frame(maxWidth: .infinity)
+                        .background(Color.green) // Button background color
+                        .cornerRadius(10) // Rounded corners
                 }
-                .padding()
+                .padding(.horizontal, 40) // Horizontal padding
             }
-            .navigationTitle("Navigation Example") // Sets the title of the navigation bar
-        } // Ends the NavigationView
-    } // Ends the body of the view
-} // Ends the OpenigView struct
+            .navigationTitle("Medicine Organiser")
+            .background(Color(UIColor.systemBackground)) // Background color of the view
+        }
+        .navigationViewStyle(StackNavigationViewStyle()) // Use StackNavigationViewStyle for better spacing in VStack
+    }
+}
 
 #if DEBUG
 struct OpenigView_Previews: PreviewProvider {
     static var previews: some View {
-        OpenigView() // Preview for OpenigView
+        OpenigView()
     }
 }
 #endif

@@ -157,10 +157,10 @@
 		D18800B42C46B59C000AE1F8 /* StoringMedicines */ = {
 			isa = PBXGroup;
 			children = (
+				D1819ED52B03B19E005362CC /* MedicineEntriesListView.swift */,
 				D162152E2B06D65000697E6F /* CreateMedicineEntryView.swift */,
 				D15B30F02B05828200E76590 /* MedicineEntryDetailView.swift */,
 				D15B30F22B058B0800E76590 /* MedicineEntryRowView.swift */,
-				D1819ED52B03B19E005362CC /* MedicineEntriesListView.swift */,
 				D1819EFD2B042B86005362CC /* MedicineEntry.swift */,
 				D16215302B06DF8800697E6F /* EditMedicineEntryView.swift */,
 			);
