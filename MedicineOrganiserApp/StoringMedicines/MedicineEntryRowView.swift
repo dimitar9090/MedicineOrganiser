@@ -31,6 +31,7 @@ struct MedicineEntryRowView: View {
         .cornerRadius(10)
         .listRowInsets(EdgeInsets()) // Remove default list row padding
         .listRowBackground(isExpired ? Color.red : Color.blue) // Ensure full row background color in List
+        
     }
 }
 

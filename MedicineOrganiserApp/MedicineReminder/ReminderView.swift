@@ -27,10 +27,22 @@ struct ReminderView: View {
                 .onDelete { indexSet in
                     reminderList.reminders.remove(atOffsets: indexSet)
                 }
-                .listRowBackground(Color.red) // To make the background of the list transparent
+                .listRowBackground(Color.purple) // To make the background of the list transparent
             }
-            .background(Color.gray) // Background for the whole list
-            .navigationTitle("Reminders")
+            .background(CustomBackgroundView()) // Background for the whole list
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    HStack {
+                        Image(systemName: "pills.fill")
+                            .font(.title)
+                            .foregroundColor(.blue)
+                        Text("Reminders")
+                            .font(.largeTitle)
+                            .foregroundColor(.blue)
+                            .padding()
+                    }
+                }
+            }
             .navigationBarItems(trailing: Button(action: {
                 showingAddReminder = true
             }) {
@@ -45,7 +57,8 @@ struct ReminderView: View {
                 AddReminderView(reminderList: reminderList)
             }
         }
-        .accentColor(.white) // Changes the color of the navigation bar items
+        .listStyle(PlainListStyle())
+        .background(Color.clear) // Changes the color of the navigation bar items
     }
 }
 

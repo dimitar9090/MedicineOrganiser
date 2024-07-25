@@ -13,9 +13,9 @@ struct AddReminderView: View {
                 TextField("Name", text: $name)
                 TextField("Dosage", text: $dosage)
                     .keyboardType(.numberPad)
-                    .onChange(of: dosage, perform: { newValue in
+                    .onChange(of: dosage) { newValue in
                         updateTimesOfDay()
-                    })
+                    }
                 
                 Section(header: Text("Times of Day")) {
                     ForEach(timesOfDay.indices, id: \.self) { index in
@@ -23,9 +23,7 @@ struct AddReminderView: View {
                     }
                 }
                 
-                Button(action: {
-                    addTimeOfDay()
-                }) {
+                Button(action: addTimeOfDay) {
                     HStack {
                         Image(systemName: "plus")
                         Text("Add Time")
@@ -37,8 +35,7 @@ struct AddReminderView: View {
                 saveReminder()
             })
         }
-        // Ensure the onChange modifier is applied outside of Form
-        .onChange(of: dosage) { newValue in
+        .onChange(of: dosage) { _ in
             updateTimesOfDay()
         }
     }

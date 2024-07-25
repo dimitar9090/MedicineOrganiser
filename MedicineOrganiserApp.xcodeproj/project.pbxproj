@@ -17,6 +17,9 @@
 		D15B30F32B058B0800E76590 /* MedicineEntryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15B30F22B058B0800E76590 /* MedicineEntryRowView.swift */; };
 		D162152F2B06D65000697E6F /* CreateMedicineEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D162152E2B06D65000697E6F /* CreateMedicineEntryView.swift */; };
 		D16215312B06DF8800697E6F /* EditMedicineEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16215302B06DF8800697E6F /* EditMedicineEntryView.swift */; };
+		D1723E742C52EEEA00B5B86A /* Drug.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1723E732C52EEEA00B5B86A /* Drug.swift */; };
+		D1723E762C52EF1100B5B86A /* OpenFDAService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1723E752C52EF1100B5B86A /* OpenFDAService.swift */; };
+		D1723E782C52EF7000B5B86A /* APIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1723E772C52EF7000B5B86A /* APIView.swift */; };
 		D1819ED42B03B19E005362CC /* MedicineOrganiserAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1819ED32B03B19E005362CC /* MedicineOrganiserAppApp.swift */; };
 		D1819ED62B03B19E005362CC /* MedicineEntriesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1819ED52B03B19E005362CC /* MedicineEntriesListView.swift */; };
 		D1819ED82B03B19F005362CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1819ED72B03B19F005362CC /* Assets.xcassets */; };
@@ -56,6 +59,9 @@
 		D15B30F22B058B0800E76590 /* MedicineEntryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineEntryRowView.swift; sourceTree = "<group>"; };
 		D162152E2B06D65000697E6F /* CreateMedicineEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMedicineEntryView.swift; sourceTree = "<group>"; };
 		D16215302B06DF8800697E6F /* EditMedicineEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMedicineEntryView.swift; sourceTree = "<group>"; };
+		D1723E732C52EEEA00B5B86A /* Drug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drug.swift; sourceTree = "<group>"; };
+		D1723E752C52EF1100B5B86A /* OpenFDAService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenFDAService.swift; sourceTree = "<group>"; };
+		D1723E772C52EF7000B5B86A /* APIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIView.swift; sourceTree = "<group>"; };
 		D1819ED02B03B19E005362CC /* MedicineOrganiserApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedicineOrganiserApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1819ED32B03B19E005362CC /* MedicineOrganiserAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineOrganiserAppApp.swift; sourceTree = "<group>"; };
 		D1819ED52B03B19E005362CC /* MedicineEntriesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineEntriesListView.swift; sourceTree = "<group>"; };
@@ -95,6 +101,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D1723E722C52EEBA00B5B86A /* OpenFDA */ = {
+			isa = PBXGroup;
+			children = (
+				D1723E732C52EEEA00B5B86A /* Drug.swift */,
+				D1723E752C52EF1100B5B86A /* OpenFDAService.swift */,
+				D1723E772C52EF7000B5B86A /* APIView.swift */,
+			);
+			path = OpenFDA;
+			sourceTree = "<group>";
+		};
 		D1819EC72B03B19E005362CC = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +134,7 @@
 		D1819ED22B03B19E005362CC /* MedicineOrganiserApp */ = {
 			isa = PBXGroup;
 			children = (
+				D1723E722C52EEBA00B5B86A /* OpenFDA */,
 				D18800B52C46B622000AE1F8 /* MedicineReminder */,
 				D18800B42C46B59C000AE1F8 /* StoringMedicines */,
 				D1819ED32B03B19E005362CC /* MedicineOrganiserAppApp.swift */,
@@ -311,16 +328,19 @@
 			files = (
 				D15B30F32B058B0800E76590 /* MedicineEntryRowView.swift in Sources */,
 				D14F6D992C480B9700BA48FC /* ReminderList.swift in Sources */,
+				D1723E782C52EF7000B5B86A /* APIView.swift in Sources */,
 				D18800B32C46B24B000AE1F8 /* OpenigView.swift in Sources */,
 				D14F6D952C480A5700BA48FC /* AddReminderView.swift in Sources */,
 				D14F6D932C480A1C00BA48FC /* Reminder.swift in Sources */,
 				D162152F2B06D65000697E6F /* CreateMedicineEntryView.swift in Sources */,
 				D1819ED62B03B19E005362CC /* MedicineEntriesListView.swift in Sources */,
 				D14F6D972C480A8100BA48FC /* NotificationManager.swift in Sources */,
+				D1723E742C52EEEA00B5B86A /* Drug.swift in Sources */,
 				D15ACB922B0A67B300BC3AF0 /* CustomBackgroundView.swift in Sources */,
 				D1819EFE2B042B86005362CC /* MedicineEntry.swift in Sources */,
 				D14F6D912C4809C800BA48FC /* ReminderView.swift in Sources */,
 				D16215312B06DF8800697E6F /* EditMedicineEntryView.swift in Sources */,
+				D1723E762C52EF1100B5B86A /* OpenFDAService.swift in Sources */,
 				D15B30F12B05828200E76590 /* MedicineEntryDetailView.swift in Sources */,
 				D1819ED42B03B19E005362CC /* MedicineOrganiserAppApp.swift in Sources */,
 			);
