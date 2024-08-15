@@ -7,7 +7,7 @@ struct MedicineOrganiserAppApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ReminderView() // Your main content view
+            OpenigView() // Your main content view
         }
     }
 }
