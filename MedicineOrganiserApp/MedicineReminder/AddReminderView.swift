@@ -43,12 +43,10 @@ struct AddReminderView: View {
     private func updateTimesOfDay() {
         if let newDosage = Int(dosage) {
             if newDosage > timesOfDay.count {
-                // Add missing dosage times
                 for _ in timesOfDay.count..<newDosage {
                     timesOfDay.append(Date())
                 }
             } else if newDosage < timesOfDay.count {
-                // Remove excess dosage times
                 timesOfDay.removeLast(timesOfDay.count - newDosage)
             }
         }

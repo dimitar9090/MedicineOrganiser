@@ -5,6 +5,10 @@ class NotificationManager {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
             if let error = error {
                 print("Authorization Error: \(error.localizedDescription)")
+            } else if !granted {
+                print("Permission not granted")
+            } else {
+                print("Permission granted")
             }
         }
     }
@@ -24,6 +28,8 @@ class NotificationManager {
             UNUserNotificationCenter.current().add(request) { error in
                 if let error = error {
                     print("Notification Error: \(error.localizedDescription)")
+                } else {
+                    print("Notification scheduled for: \(dateComponents)")
                 }
             }
         }

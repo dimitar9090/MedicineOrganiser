@@ -27,9 +27,9 @@ struct ReminderView: View {
                 .onDelete { indexSet in
                     reminderList.reminders.remove(atOffsets: indexSet)
                 }
-                .listRowBackground(Color.purple) // To make the background of the list transparent
+                .listRowBackground(Color.purple)
             }
-            .background(CustomBackgroundView()) // Background for the whole list
+            .background(CustomBackgroundView())
             .toolbar {
                 ToolbarItem(placement: .principal) {
                     HStack {
@@ -58,7 +58,7 @@ struct ReminderView: View {
             }
         }
         .listStyle(PlainListStyle())
-        .background(Color.clear) // Changes the color of the navigation bar items
+        .background(Color.clear)
     }
 }
 
